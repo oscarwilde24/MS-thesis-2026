@@ -70,7 +70,7 @@ def plot_merged(ax, af_global, af_india, cmap, locus):
     top_global = af_global.sort_values(ascending=False).head(10)
     top_india = af_india.sort_values(ascending=False).head(10)
 
-    gap = 0.5
+    gap = 1
     x_global = np.arange(len(top_global))
     x_india = np.arange(len(top_india)) + len(top_global) + gap
 
@@ -85,8 +85,8 @@ def plot_merged(ax, af_global, af_india, cmap, locus):
     ax.set_xticks(xticks)
     
     # Configure tick label font sizes
-    ax.set_xticklabels(xlabels, rotation=45, ha="right", fontsize=15)
-    ax.tick_params(axis='y', labelsize=15)
+    ax.set_xticklabels(xlabels, rotation=45, ha="right", fontsize=20)
+    ax.tick_params(axis='y', labelsize=20)
 
     # Locus-specific Y-axis ranges
     if locus == "B":
